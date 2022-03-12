@@ -3,10 +3,10 @@ export type Post = {
   title: string;
   subTitle: string;
   body: HTMLElement;
-  thumbnail: {
+  thumbnail?: {
     url: string;
   };
-  categories: [
+  categories?: [
     {
       id: string;
       name: string;
