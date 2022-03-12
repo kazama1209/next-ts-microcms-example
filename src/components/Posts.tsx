@@ -16,7 +16,7 @@ const Posts: React.FC<PostsProps> = ({ posts }) => {
             <Link href="/blog/[id]" as={`/blog/${id}`} passHref>
               <div className="max-w-sm rounded overflow-hidden shadow-lg">
                 <Image
-                  src={thumbnail.url}
+                  src={thumbnail?.url || "/no_image.png"}
                   width={640}
                   height={480}
                   alt="thumbnail image"

@@ -37,7 +37,7 @@ const BlogId: React.FC<BlogIdProps> = ({ post }) => {
       <>
         <div className="flex justify-center my-5">
           <Image
-            src={post.thumbnail.url}
+            src={post.thumbnail?.url || "/no_image.png"}
             width={384}
             height={288}
             alt="thumbnail image"
