@@ -34,25 +34,22 @@ type BlogIdProps = {
 const BlogId: React.FC<BlogIdProps> = ({ post }) => {
   return (
     <Common>
-      <>
-        <div className="flex justify-center my-5">
+      <div className="flex justify-center">
+        <div className="flex-col my-5">
           <Image
             src={post.thumbnail?.url || "/no_image.png"}
             width={384}
             height={288}
             alt="thumbnail image"
           />
-        </div>
-
-        <div className="flex justify-center my-5">
           <div
-            className="prose w-96"
+            className="prose w-96 mt-3"
             dangerouslySetInnerHTML={{
               __html: `${post.body}`,
             }}
           />
         </div>
-      </>
+      </div>
     </Common>
   );
 };
