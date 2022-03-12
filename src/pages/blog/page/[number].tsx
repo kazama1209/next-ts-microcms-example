@@ -45,7 +45,9 @@ type BlogPageProps = {
 const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
   return (
     <Common>
-      <Posts posts={posts} />
+      <div className="my-3 mx-5">
+        <Posts posts={posts} />
+      </div>
     </Common>
   );
 };

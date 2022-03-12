@@ -13,7 +13,7 @@ const Posts: React.FC<PostsProps> = ({ posts }) => {
       <div className="flex-col">
         {posts?.map(({ id, title, subTitle, thumbnail, categories }) => {
           return (
-            <div key={id} className="my-5">
+            <div key={id} className="pb-5">
               <Link href="/blog/[id]" as={`/blog/${id}`} passHref>
                 <div className="max-w-sm rounded overflow-hidden shadow-lg cursor-pointer">
                   <Image

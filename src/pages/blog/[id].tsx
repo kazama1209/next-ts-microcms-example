@@ -2,6 +2,8 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 
 import Common from "components/layouts/Common";
+import PostDetail from "components/PostDetail";
+
 import { getAllPosts, getPostById } from "lib/api/posts";
 import { Post } from "types";
 
@@ -34,21 +36,8 @@ type BlogIdProps = {
 const BlogId: React.FC<BlogIdProps> = ({ post }) => {
   return (
     <Common>
-      <div className="flex justify-center">
-        <div className="flex-col my-5">
-          <Image
-            src={post.thumbnail?.url || "/no_image.png"}
-            width={384}
-            height={288}
-            alt="thumbnail image"
-          />
-          <div
-            className="prose w-96 mt-3"
-            dangerouslySetInnerHTML={{
-              __html: `${post.body}`,
-            }}
-          />
-        </div>
+      <div className="my-3 mx-5">
+        <PostDetail post={post} />
       </div>
     </Common>
   );
