@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
 import Common from "components/layouts/Common";
-import Posts from "components/Posts";
+import Posts from "components/blog/Posts";
 import { getAllPosts } from "lib/api/posts";
 
 import { Post } from "types";

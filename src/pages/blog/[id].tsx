@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import Image from "next/image";
 
 import Common from "components/layouts/Common";
-import PostDetail from "components/PostDetail";
+import PostDetail from "components/blog/PostDetail";
 
 import { getAllPosts, getPostById } from "lib/api/posts";
 import { Post } from "types";
